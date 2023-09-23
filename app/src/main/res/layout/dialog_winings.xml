@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="440dp"
+        android:layout_height="300dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/text_box01">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:paddingEnd="2dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:text="@string/complete"
+            android:textAllCaps="true"
+            android:textSize="35dp" />
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="2dp"
+                android:gravity="center_vertical"
+                android:shadowColor="@color/black"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="Score"
+                android:textAllCaps="true"
+                android:textSize="25dp" />
+
+            <TextView
+                android:scaleY="1.1"
+                android:scaleX="1.1"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/score"
+                style="@style/BasicText"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:background="@drawable/score02"
+                android:paddingTop="3dp"
+                tools:text="20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/BasicText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="2dp"
+                android:gravity="center_vertical"
+                android:shadowColor="@color/black"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="Record"
+                android:textAllCaps="true"
+                android:textSize="25dp" />
+
+            <TextView
+                android:scaleY="1.1"
+                android:scaleX="1.1"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/bestScore"
+                style="@style/BasicText"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:background="@drawable/score02"
+                android:paddingTop="3dp"
+                tools:text="20" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.basketball.game.core.library.CustomImageButton
+                android:id="@+id/menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/menu02"/>
+
+            <com.basketball.game.core.library.CustomImageButton
+                android:id="@+id/restart"
+                android:layout_width="30dp"
+                android:layout_marginHorizontal="80dp"
+                android:layout_height="30dp"
+                android:src="@drawable/restart"/>
+
+            <com.basketball.game.core.library.CustomImageButton
+                android:id="@+id/settings"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/settings03"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

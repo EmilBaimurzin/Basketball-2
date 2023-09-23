@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.basketball.game.ui.home_page.FragmentHomePage"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentBasketBall"
+            app:destination="@id/fragmentBasketBall" />
+        <action
+            android:id="@+id/action_fragmentMain_to_dialogSettings"
+            app:destination="@id/dialogSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBasketBall"
+        android:name="com.basketball.game.ui.basketball.FragmentBasketBall"
+        android:label="FragmentBasketBall" >
+        <action
+            android:id="@+id/action_fragmentBasketBall_to_dialogSettings"
+            app:destination="@id/dialogSettings" />
+        <action
+            android:id="@+id/action_fragmentBasketBall_to_dialogWinning"
+            app:destination="@id/dialogWinning" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogSettings"
+        android:name="com.basketball.game.ui.dialogs.settings.DialogSettings"
+        android:label="DialogSettings" />
+    <dialog
+        android:id="@+id/dialogWinning"
+        android:name="com.basketball.game.ui.dialogs.DialogWinning"
+        android:label="DialogWinning" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+</navigation>
